@@ -1,15 +1,21 @@
 {
   "name": "mi-bot-de-telegram",
   "version": "1.0.0",
-  "description": "Bot de Telegram en Render",
+  "type": "module",
+  "description": "Bot de Telegram con programación de mensajes",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "node --watch index.js"
   },
   "dependencies": {
     "express": "^4.21.2",
-    "lowdb": "^2.1.0",
+    "lowdb": "^7.0.1",
     "node-cron": "^3.0.3",
     "telegraf": "^4.16.3"
-  }
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "MIT"
 }
