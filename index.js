@@ -3,7 +3,6 @@ const express = require('express');
 const cron = require('node-cron');
 const low = require('lowdb');
 const FileSync = require('lowdb/node/adapters/FileSync');
-
 // Inicializar el bot con el token de Telegram
 const bot = new Telegraf(process.env.TELEGRAM_BOT_TOKEN);
 
