@@ -5,7 +5,7 @@ const express = require('express');
 const bot = new Telegraf(process.env.TELEGRAM_BOT_TOKEN);
 
 // Configurar comandos y manejadores de mensajes
-bot.start((ctx) => ctx.reply('¡Hola! Bienvenido al bot.'));
+bot.start((ctx) => ctx.reply('¡Hola! Bienvenido al bot mejorado 2.0.'));
 bot.on('message', (ctx) => ctx.reply(ctx.message.text));
 
 // Manejo de errores
