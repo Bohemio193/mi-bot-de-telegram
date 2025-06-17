@@ -1,18 +1,22 @@
 const { Telegraf } = require('telegraf');
+const express = require('express');
+
+// Inicializar el bot con el token de Telegram
 const bot = new Telegraf(process.env.TELEGRAM_BOT_TOKEN);
 
+// Configurar comandos y manejadores de mensajes
 bot.start((ctx) => ctx.reply('¡Hola! Bienvenido al bot.'));
 bot.on('message', (ctx) => ctx.reply(ctx.message.text));
-
-bot.launch();
 
 // Manejo de errores
 bot.catch((err, ctx) => {
   console.error(`Ocurrió un error en el contexto ${ctx.updateType}`, err);
 });
 
+// Iniciar el bot en modo polling
+bot.launch();
+
 // Mantener la aplicación activa
-const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
